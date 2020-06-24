@@ -4,8 +4,11 @@ const dayOfTheWeek = (date = new Date()) => {
   return days[date.getDay()];
 };
 
+const isWednesday = dayOfTheWeek() === "Wednesday" ? ", my dudes" : null;
+
 try {
   document.getElementById("day").innerText = dayOfTheWeek();
+  document.getElementById("mydudes").innerText = isWednesday;
 } catch (err) {}
 
 exports.dayOfTheWeek = dayOfTheWeek;
