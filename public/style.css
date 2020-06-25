@@ -4,6 +4,11 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+p {
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -27,13 +32,6 @@ a {
   align-items: center;
   justify-content: space-evenly;
   height: 100%;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  background-color: aqua;
-  height: 500px;
 }
 
 .header-text-container {
@@ -60,4 +58,123 @@ li:nth-child(2) {
 
 li:last-child {
   padding-right: 40px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: aqua;
+  height: 80vh;
+}
+
+main {
+  text-align: center;
+}
+
+.about-container {
+  width: 100%;
+  background: tomato;
+  color: #fff;
+  margin-top: 10%;
+  padding: 4em 0 2em;
+  border-top-left-radius: 40px;
+  transform: skewY(-2deg);
+}
+
+.about-container::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: tomato;
+  position: absolute;
+  top: -39px;
+  right: 0;
+  z-index: -2;
+}
+
+.about-container::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  top: -80px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.about-container ul {
+  display: flex; /*move during media queries*/
+  transform: skewY(2deg);
+}
+
+.about-container ul li {
+  margin-bottom: 3em;
+}
+
+.about-container ul li p {
+  padding: 0.5em;
+}
+
+.about-container img {
+  width: 170px;
+}
+
+footer {
+  margin-top: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-container {
+  position: relative;
+  top: 50px;
+  width: 100%;
+  background: #3d444a;
+  color: #fff;
+  padding: 3em 0;
+  border-top-right-radius: 40px;
+  transform: skewY(2deg);
+}
+
+.footer-container .container {
+  transform: skewY(-2deg);
+  text-align: center;
+}
+
+.footer-container:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #3d444a;
+  position: absolute;
+  top: -39px;
+  left: 0;
+  z-index: -2;
+}
+
+.footer-container:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  position: absolute;
+  z-index: -1;
+  top: -80px;
+  left: 0;
+  border-radius: 50%;
+}
+
+ul.footer-links {
+  margin: 0 auto;
+}
+
+ul.footer-links li {
+  display: inline-block;
+}
+
+ul.footer-links li a {
+  color: #9d9d9d;
+  font-size: 0.8em;
 }
