@@ -1,3 +1,5 @@
+/* Defaults are for screen less than 650px */
+
 body {
   margin: 0;
   padding: 0;
@@ -40,8 +42,9 @@ a {
 }
 
 header > img {
+  display: none; /* hidden when width less than 650px */
   width: 150px;
-  margin: 150px;
+  padding-right: 150px;
 }
 
 h1 {
@@ -64,7 +67,7 @@ header {
   display: flex;
   align-items: center;
   background-color: aqua;
-  height: 80vh;
+  height: 65vh;
 }
 
 main {
@@ -105,12 +108,13 @@ main {
 }
 
 .about-container ul {
-  display: flex; /*move during media queries*/
+  display: flex;
+  flex-direction: column; /*default for <650px width*/
   transform: skewY(2deg);
 }
 
 .about-container ul li {
-  margin-bottom: 3em;
+  margin: 0em 4em; /*default for <650px width*/
 }
 
 .about-container ul li p {
@@ -137,7 +141,7 @@ footer {
   width: 100%;
   background: #3d444a;
   color: #fff;
-  padding: 3em 2em;
+  padding: 3em 0em;
   border-top-right-radius: 40px;
   transform: skewY(2deg);
 }
@@ -181,4 +185,22 @@ ul.footer-links li {
 ul.footer-links li a {
   color: #9d9d9d;
   font-size: 0.8em;
+}
+
+@media only screen and (min-width: 650px) {
+  header > img {
+    display: block;
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 970px) {
+  /*When screen is less than 970*/
+  .about-container ul {
+    flex-direction: row;
+  }
+
+  .about-container ul li {
+    margin-bottom: 3em;
+  }
 }
