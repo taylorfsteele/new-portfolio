@@ -121,25 +121,29 @@ main {
   width: 170px;
 }
 
+section {
+  height: 200px;
+}
+
 footer {
-  margin-top: 100px;
+  margin-top: 150px;
   overflow: hidden;
   position: relative;
 }
 
 .footer-container {
   position: relative;
-  top: 50px;
+  bottom: -60px;
   width: 100%;
   background: #3d444a;
   color: #fff;
-  padding: 3em 0;
+  padding: 3em 2em;
   border-top-right-radius: 40px;
   transform: skewY(2deg);
 }
 
 .footer-container .container {
-  transform: skewY(-2deg);
+  transform: translateY(-20px) skewY(-2deg);
   text-align: center;
 }
 
