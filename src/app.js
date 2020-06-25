@@ -5,8 +5,10 @@ const dayOfTheWeek = (date = new Date()) => {
 };
 
 const isWednesday = dayOfTheWeek() === "Wednesday" ? ", my dudes" : null;
-
 const isChungus = Math.floor(Math.random() * 50) === 37 ? true : false;
+
+const scriptPath = document.getElementById("script").src;
+console.log(scriptPath);
 
 try {
   document.getElementById("day").innerText = dayOfTheWeek();
