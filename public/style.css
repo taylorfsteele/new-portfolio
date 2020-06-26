@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  background: var(--bg);
 }
 
 p {
@@ -25,8 +26,7 @@ a {
 .navbar {
   height: 70px;
   width: 100%;
-  background: black;
-  color: white;
+  color: var(--text);
 }
 
 .navbar-nav {
@@ -66,7 +66,6 @@ li:last-child {
 header {
   display: flex;
   align-items: center;
-  background-color: aqua;
   height: 65vh;
 }
 
@@ -76,7 +75,7 @@ main {
 
 .about-container {
   width: 100%;
-  background: tomato;
+  background: var(--blue);
   color: #fff;
   margin-top: 10%;
   padding: 4em 0 2em;
@@ -88,7 +87,7 @@ main {
   content: "";
   width: 40px;
   height: 40px;
-  background-color: tomato;
+  background-color: var(--about-bg);
   position: absolute;
   top: -39px;
   right: 0;
@@ -99,7 +98,7 @@ main {
   content: "";
   width: 80px;
   height: 80px;
-  background-color: #fff;
+  background-color: var(--bg);
   top: -80px;
   position: absolute;
   right: 0;
@@ -139,7 +138,7 @@ footer {
   position: relative;
   bottom: -60px;
   width: 100%;
-  background: #3d444a;
+  background: var(--footer);
   color: #fff;
   padding: 3em 0em;
   border-top-right-radius: 40px;
@@ -166,7 +165,7 @@ footer {
   content: "";
   width: 80px;
   height: 80px;
-  background-color: #fff;
+  background-color: var(--bg);
   position: absolute;
   z-index: -1;
   top: -80px;
@@ -203,4 +202,31 @@ ul.footer-links li a {
   .about-container ul li {
     margin-bottom: 3em;
   }
+}
+
+/*Themes*/
+
+:root {
+  --cultured: #f9f8f8;
+  --timberwolf: #cdd3ce;
+  --charcoal: #373f51;
+  --black-chocolate: #0f1108;
+  --blue: #0084a5;
+}
+
+.light {
+  --bg: var(--cultured);
+  --text: var(--black-chocolate);
+  --about-bg: var(--blue);
+  --about-text: ();
+  --footer: var(--charcoal);
+}
+
+.dark {
+  --bg: var(--gray5);
+  --bg-nav: linear-gradient(to right, var(--gray5), var(--gray6));
+  --bg-dropdown: var(--gray6);
+  --text: var(--gray0);
+  --border-color: var(--purple);
+  --bg-solar: var(--blue);
 }
