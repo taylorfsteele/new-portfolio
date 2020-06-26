@@ -42,6 +42,10 @@ figure {
   border-radius: 5px;
 }
 
+.picture-item:nth-child(even) .color-block {
+  background-color: var(--about-bg);
+}
+
 .filter-label {
   display: block;
   padding: 0;
