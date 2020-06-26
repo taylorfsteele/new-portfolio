@@ -1,8 +1,5 @@
 import Shuffle from "shufflejs";
 
-const sup = document.currentScript.src;
-console.log(sup);
-
 class Projects {
   constructor(element) {
     this.element = element;
@@ -16,6 +13,7 @@ class Projects {
     this._activeFilters = [];
     this.addFilterButtons();
   }
+
 
   /**
    * Shuffle uses the CustomEvent constructor to dispatch events. You can listen
