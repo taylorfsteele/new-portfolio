@@ -37,14 +37,14 @@ a {
 }
 
 .header-text-container {
-  flex: 1 1 auto;
-  margin: 50px;
+  flex: auto;
+  padding-left: 7%;
 }
 
 header > img {
   display: none; /* hidden when width less than 650px */
   width: 150px;
-  padding-right: 150px;
+  padding-right: 25%;
 }
 
 h1 {
