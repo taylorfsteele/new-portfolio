@@ -125,8 +125,9 @@ main {
 }
 
 section {
-  height: 1300px;
-  margin-top: 10%;
+  height: 100%;
+  margin-top: 7%;
+  margin-bottom: 7%;
 }
 
 footer {
@@ -213,14 +214,16 @@ ul.footer-links li a {
   --charcoal: #373f51;
   --black-chocolate: #0f1108;
   --blue: #0084a5;
+  --blush: #e55381;
 }
 
 .light {
   --bg: var(--cultured);
   --text: var(--black-chocolate);
   --about-bg: var(--blue);
-  --about-text: ();
+  --about-text: var(--cultured);
   --footer: var(--charcoal);
+  --accent: var(--blush);
 }
 
 .dark {

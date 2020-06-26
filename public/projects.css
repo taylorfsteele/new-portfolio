@@ -1,7 +1,7 @@
 /* Small reset */
 :root {
   --picture-gutter: 24px;
-  --item-height: 220px;
+  --item-height: 260px;
 }
 
 figure {
@@ -9,17 +9,17 @@ figure {
   padding: 0;
 }
 
-section img {
+/* section img {
   display: block;
   max-width: 100%;
-}
+} */
 
 /*
   Shuffle needs either relative or absolute positioning on the container
   It will set it for you, but it'll cause another style recalculation and layout.
   AKA worse performance - so just set it here
  */
-.my-shuffle-container {
+.shuffle-container {
   position: relative;
   overflow: hidden;
 }
@@ -31,89 +31,17 @@ section img {
 }
 
 .picture-item {
-  height: 220px;
+  height: var(--item-height);
   margin-top: var(--picture-gutter);
 }
 
-@supports (object-fit: cover) {
-  .picture-item img {
-    max-width: none;
-    height: auto;
-    object-fit: cover;
-  }
-}
-.picture-item--h2 {
-  height: var(--item-height) * 2 + var(--picture-gutter);
-  /* 2x the height + 1 gutter */
-}
-
-.picture-item__inner {
-  position: relative;
+.color-block {
+  background-color: var(--accent);
+  width: 100%;
   height: 100%;
-  overflow: hidden;
-  background: #ecf0f1;
+  border-radius: 5px;
 }
 
-.picture-item__details {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 0em;
-}
-
-.picture-item__description {
-  width: 100%;
-  padding: 0 2em 1em 1em;
-  margin: 0;
-}
-
-.picture-item__tags {
-  flex-shrink: 1;
-  text-align: right;
-  margin: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .picture-item--overlay .picture-item__details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(7px);
-    color: white;
-    overflow: hidden;
-  }
-  .picture-item--overlay .picture-item__description {
-    display: none;
-  }
-  .picture-item--overlay a {
-    color: white;
-    text-shadow: 0 0 1px black;
-  }
-}
-@media screen and (max-width: 767px) {
-  .picture-item {
-    height: auto;
-    margin-top: 20px;
-  }
-
-  .picture-item__details,
-  .picture-item__description {
-    font-size: 0.875em;
-    padding: 0.625em;
-  }
-
-  .picture-item__description {
-    padding-right: 0.875em;
-    padding-bottom: 1.25em;
-  }
-
-  .picture-item--h2 {
-    height: auto;
-  }
-}
 .filter-label {
   display: block;
   padding: 0;
@@ -130,15 +58,14 @@ section img {
 
 @media screen and (min-width: 768px) {
   .filters-group-wrap {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+    /* justify-content: center;
+    align-content: center; */
   }
 }
 .btn-group:after,
 .btn-group:before {
-  content: " ";
+  content: "";
   display: table;
 }
 
@@ -248,114 +175,16 @@ section img {
     font-size: 0.875rem;
   }
 }
-.textfield {
-  -webkit-appearance: none;
-  box-sizing: border-box;
-  width: 100%;
-  border: 2px solid #95a5a6;
-  border-radius: 4px;
-  padding: 0.5em;
-  font-size: 1rem;
-  color: #34495e;
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
-}
 
-.textfield::-webkit-input-placeholder {
-  color: #95a5a6;
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
-}
-
-.textfield:-ms-input-placeholder {
-  color: #95a5a6;
-  -ms-transition: 0.15s;
-  transition: 0.15s;
-}
-
-.textfield::-ms-input-placeholder {
-  color: #95a5a6;
-  -ms-transition: 0.15s;
-  transition: 0.15s;
-}
-
-.textfield::-moz-placeholder {
-  color: #95a5a6;
-  -moz-transition: 0.15s;
-  transition: 0.15s;
-}
-
-.textfield::placeholder {
-  color: #95a5a6;
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
-}
-
-.textfield:hover {
-  outline-width: 0;
-  color: #5d6d77;
-  border-color: #5d6d77;
-}
-
-.textfield:hover::-webkit-input-placeholder {
-  color: #5d6d77;
-}
-
-.textfield:hover:-ms-input-placeholder {
-  color: #5d6d77;
-}
-
-.textfield:hover::-ms-input-placeholder {
-  color: #5d6d77;
-}
-
-.textfield:hover::-moz-placeholder {
-  color: #5d6d77;
-}
-
-.textfield:hover::placeholder {
-  color: #5d6d77;
-}
-
-.textfield:focus {
-  outline-width: 0;
-  border-color: #34495e;
-}
-
-.textfield:focus::-webkit-input-placeholder {
-  color: #34495e;
-}
-
-.textfield:focus:-ms-input-placeholder {
-  color: #34495e;
-}
-
-.textfield:focus::-ms-input-placeholder {
-  color: #34495e;
-}
-
-.textfield:focus::-moz-placeholder {
-  color: #34495e;
-}
-
-.textfield:focus::placeholder {
-  color: #34495e;
-}
-
-.container {
-  padding-left: 3.5%;
-  padding-right: 3.5%;
-}
-
-.container:after,
+/* .container:after,
 .container:before {
-  content: " ";
+  content: "";
   display: table;
 }
 
 .container:after {
   clear: both;
-}
+} */
 
 .row {
   margin-left: auto;
@@ -364,7 +193,7 @@ section img {
 
 .row:after,
 .row:before {
-  content: " ";
+  content: "";
   display: table;
 }
 
