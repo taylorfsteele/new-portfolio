@@ -125,7 +125,8 @@ main {
 }
 
 section {
-  height: 1500px;
+  height: 1300px;
+  margin-top: 10%;
 }
 
 footer {
