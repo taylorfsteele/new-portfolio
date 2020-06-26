@@ -14,18 +14,13 @@ class Projects {
     this.addFilterButtons();
   }
 
-
   /**
    * Shuffle uses the CustomEvent constructor to dispatch events. You can listen
    * for them like you normally would (with jQuery for example).
    */
   addShuffleEventListeners() {
-    this.shuffle.on(Shuffle.EventType.LAYOUT, (data) => {
-      console.log("layout. data:", data);
-    });
-    this.shuffle.on(Shuffle.EventType.REMOVED, (data) => {
-      console.log("removed. data:", data);
-    });
+    this.shuffle.on(Shuffle.EventType.LAYOUT, (data) => {});
+    this.shuffle.on(Shuffle.EventType.REMOVED, (data) => {});
   }
 
   addFilterButtons() {
