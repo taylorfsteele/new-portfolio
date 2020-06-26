@@ -32,7 +32,7 @@ a {
 .navbar-nav {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   height: 100%;
 }
 
@@ -125,7 +125,7 @@ main {
 }
 
 section {
-  height: 200px;
+  height: 1500px;
 }
 
 footer {
@@ -145,7 +145,7 @@ footer {
   transform: skewY(2deg);
 }
 
-.footer-container .container {
+.footer-sub-container {
   transform: translateY(-20px) skewY(-2deg);
   text-align: center;
 }
