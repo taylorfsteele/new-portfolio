@@ -1,18 +1,73 @@
-const dayOfTheWeek = (date = new Date()) => {
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+import Shuffle from "shufflejs";
 
-  return days[date.getDay()];
-};
+class Projects {
+  constructor(element) {
+    this.element = element;
+    this.shuffle = new Shuffle(element, {
+      itemSelector: ".picture-item",
+      sizer: element.querySelector(".my-sizer-element"),
+    });
 
-const isWednesday = dayOfTheWeek() === "Wednesday" ? ", my dudes" : null;
-const isChungus = Math.floor(Math.random() * 50) === 37 ? true : false;
+    // Log events.
+    this.addShuffleEventListeners();
+    this._activeFilters = [];
+    this.addFilterButtons();
+  }
 
-try {
-  document.getElementById("day").innerText = dayOfTheWeek();
-  document.getElementById("mydudes").innerText = isWednesday;
-  document.getElementById("picture").src = isChungus
-    ? "https://i.kym-cdn.com/photos/images/original/001/447/699/3a0.png"
-    : "dober.jpg";
-} catch (err) {}
 
-exports.dayOfTheWeek = dayOfTheWeek;
+  /**
+   * Shuffle uses the CustomEvent constructor to dispatch events. You can listen
+   * for them like you normally would (with jQuery for example).
+   */
+  addShuffleEventListeners() {
+    this.shuffle.on(Shuffle.EventType.LAYOUT, (data) => {
+      console.log("layout. data:", data);
+    });
+    this.shuffle.on(Shuffle.EventType.REMOVED, (data) => {
+      console.log("removed. data:", data);
+    });
+  }
+
+  addFilterButtons() {
+    const options = document.querySelector(".filter-options");
+    if (!options) {
+      return;
+    }
+
+    const filterButtons = Array.from(options.children);
+    const onClick = this._handleFilterClick.bind(this);
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", onClick, false);
+    });
+  }
+
+  _handleFilterClick(evt) {
+    const btn = evt.currentTarget;
+    const isActive = btn.classList.contains("active");
+    const btnGroup = btn.getAttribute("data-group");
+
+    this._removeActiveClassFromChildren(btn.parentNode);
+
+    let filterGroup;
+    if (isActive) {
+      btn.classList.remove("active");
+      filterGroup = Shuffle.ALL_ITEMS;
+    } else {
+      btn.classList.add("active");
+      filterGroup = btnGroup;
+    }
+
+    this.shuffle.filter(filterGroup);
+  }
+
+  _removeActiveClassFromChildren(parent) {
+    const { children } = parent;
+    for (let i = children.length - 1; i >= 0; i--) {
+      children[i].classList.remove("active");
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  window.project = new Projects(document.getElementById("grid"));
+});
