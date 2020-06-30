@@ -268,8 +268,7 @@ ul.footer-links li a {
 	}
 }
 
-@media only screen and (min-width: 970px) {
-	/*When screen is less than 970*/
+@media only screen and (min-width: 1024px) {
 }
 
 /*Themes*/
