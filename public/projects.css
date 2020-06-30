@@ -1,6 +1,7 @@
 :root {
 	--picture-gutter: 24px;
 	--item-height: 260px;
+	--border-radius-value: 10px;
 }
 
 figure {
@@ -34,25 +35,75 @@ figure {
 	width: 100%;
 	z-index: 1;
 	height: 100%;
-	background-color: var(--accent);
-	border-radius: 10px;
+	border: thin solid black;
+	box-sizing: border-box; /*adds border & padding to width & height of element */
+	border-radius: var(--border-radius-value);
+}
+
+.outer-figure::after {
+	content: "";
+	background-image: url("https://i.picsum.photos/id/287/4288/2848.jpg?hmac=f_-W7-bOKUxLoH9uOz4Hwk9D8zYTgzbHX7i_vY_ljug");
+	background-size: cover;
+	opacity: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+	border-radius: var(--border-radius-value);
+}
+
+.outer-figure-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	color: aliceblue;
+	padding: 1em;
+	border-radius: calc(var(--border-radius-value) - 2px);
+}
+
+.outer-figure-content {
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+	color: aliceblue;
+	width: 100%;
+	padding-left: 1em;
+	border-radius: calc(var(--border-radius-value) - 2px);
 }
 
 .outer-figure .inner-figure {
 	position: absolute;
-	z-index: 2;
 	top: 0;
-	box-sizing: border-box; /*adds border & padding to width & height of element */
+	left: 0;
+	z-index: 2;
 	height: 100%;
 	width: 100%;
-	background-color: var(--about-bg);
-	border-radius: 10px;
-	clip-path: circle(10% at 90% 15%);
-	transition: clip-path 0.5s ease-in-out;
+	background-color: white;
+	border-radius: calc(var(--border-radius-value) - 2px);
+	box-sizing: border-box;
+	clip-path: circle(8% at 90% 20%);
+	transition: all 0.5s ease-in-out;
 }
 
 .outer-figure .inner-figure:hover {
 	clip-path: circle(75%);
+	background-color: var(--projects-bg);
+}
+
+.inner-figure span {
+	position: absolute;
+	top: 16%;
+	right: 5.5%;
+	transition: all 0.5s ease-in-out;
+}
+
+.inner-figure:hover span {
+	color: var(--projects-bg);
 }
 
 .color-block {
