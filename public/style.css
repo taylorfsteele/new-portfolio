@@ -53,12 +53,12 @@ h1 {
 }
 
 .cta {
-	color: var(--about-bg);
+	color: var(--primary-color);
 	text-transform: uppercase;
 	font-weight: bold;
 	background: var(--bg);
 	border-style: solid;
-	border-color: var(--about-bg);
+	border-color: var(--primary-color);
 	border-width: medium;
 	padding: 20px;
 	border-radius: 5px;
@@ -67,7 +67,7 @@ h1 {
 }
 
 .cta:hover {
-	background: var(--about-bg);
+	background: var(--primary-color);
 	color: var(--bg);
 	-webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 	-moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
@@ -112,7 +112,7 @@ main {
 	content: "";
 	width: 40px;
 	height: 40px;
-	background-color: var(--about-bg);
+	background-color: var(--primary-color);
 	position: absolute;
 	top: -39px;
 	right: 0;
@@ -285,7 +285,7 @@ ul.footer-links li a {
 .light {
 	--bg: var(--cultured);
 	--text: var(--black-chocolate);
-	--about-bg: var(--blue);
+	--primary-color: var(--blue);
 	--projects-bg: var(--timberwolf);
 	--about-text: var(--cultured);
 	--footer: var(--charcoal);
