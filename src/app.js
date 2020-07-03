@@ -1,5 +1,8 @@
 import Shuffle from "shufflejs";
 
+const emoji = ["🌮", "🍕", "🍜", "🍋", "🍪"];
+document.getElementById("emoji").textContent = emoji[Math.floor(Math.random() * emoji.length)];
+
 class Projects {
 	constructor(element) {
 		this.element = element;
