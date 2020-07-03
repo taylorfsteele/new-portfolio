@@ -123,6 +123,11 @@ figure {
 	margin-top: 0;
 }
 
+.inner-text a {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .color-block {
 	background-color: var(--accent);
 
