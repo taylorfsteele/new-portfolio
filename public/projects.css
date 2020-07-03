@@ -74,6 +74,11 @@ figure {
 	width: 100%;
 	padding-left: 1em;
 	border-radius: calc(var(--border-radius-value) - 2px);
+	height: 5em;
+}
+
+.outer-figure-content * {
+	line-height: 0.7em;
 }
 
 .outer-figure-content span {
@@ -96,11 +101,26 @@ figure {
 	box-sizing: border-box;
 	clip-path: circle(20% at 95% 92%);
 	transition: all 0.5s ease-in-out;
+	display: flex;
 }
 
 .inner-figure:hover {
 	clip-path: circle(75%);
 	opacity: 1;
+}
+
+.inner-figure img {
+	border-top-left-radius: calc(var(--border-radius-value) - 2px);
+	border-bottom-left-radius: calc(var(--border-radius-value) - 2px);
+	height: 100%;
+}
+
+.inner-text {
+	padding: 1em;
+}
+
+.inner-text h3:first-of-type {
+	margin-top: 0;
 }
 
 .color-block {
@@ -445,6 +465,10 @@ figure {
 	}
 	.inner-figure {
 		clip-path: circle(10% at 95% 92%);
+	}
+
+	.inner-figure-small {
+		clip-path: circle(20% at 95% 92%);
 	}
 }
 @media screen and (min-width: 1024px) {
