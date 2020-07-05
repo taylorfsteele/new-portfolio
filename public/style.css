@@ -99,7 +99,6 @@ main {
 
 .about-container {
 	width: 100%;
-	min-height: 35vh;
 	background: var(--blue);
 	color: #fff;
 	margin-top: 10%;
@@ -263,8 +262,8 @@ ul.footer-links li a {
 		display: none;
 	}
 	.about-text-container {
-		margin-left: 30%;
-		margin-right: 10%;
+		margin-left: 20%;
+		margin-right: 20%;
 	}
 }
 

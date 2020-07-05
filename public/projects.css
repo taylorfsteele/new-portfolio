@@ -262,7 +262,7 @@ figure {
 
 .btn--primary.active,
 .btn--primary:active {
-	background-color: #3498db;
+	background-color: var(--primary-color);
 }
 
 .btn--primary:focus.active {
