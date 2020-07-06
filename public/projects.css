@@ -112,7 +112,7 @@ figure {
 
 .portfolio::after {
 	content: "";
-	background-image: url("./suppp.png");
+	background-image: url("./cicd.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: var(--portfolio-project-bg);
