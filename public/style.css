@@ -230,10 +230,17 @@ ul.footer-links li a {
 		width: 700px;
 		margin-right: 20%;
 	}
-	main {
-		text-align: center;
-	}
 
+	.about-text-container {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	main {
+		text-align: left;
+	}
 	.about-watermark {
 		font-size: 60px;
 		transform: skewY(2deg);
@@ -255,13 +262,6 @@ ul.footer-links li a {
 	.about-content img:last-of-type {
 		display: none;
 	}
-	.about-text-container {
-		margin-left: 20%;
-		margin-right: 20%;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
 }
 
 /*Themes*/
