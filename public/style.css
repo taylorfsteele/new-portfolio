@@ -161,6 +161,10 @@ main {
 	display: block;
 }
 
+.about-text-container {
+	padding: 1em;
+}
+
 section {
 	height: 100%;
 	margin-top: 7%;
