@@ -273,6 +273,7 @@ ul.footer-links li a {
 	--black-chocolate: #0f1108;
 	--blue: #0084a5;
 	--blush: #e55381;
+	--skyblue: #33d6ff;
 }
 
 .light {
@@ -283,6 +284,7 @@ ul.footer-links li a {
 	--about-text: var(--cultured);
 	--footer: var(--charcoal);
 	--accent: var(--blush);
+	--portfolio-project-bg: var(--skyblue);
 }
 
 .dark {

@@ -68,6 +68,64 @@ figure {
 	border-radius: var(--border-radius-value);
 }
 
+.walk-score::after {
+	content: "";
+	background-image: url("./subway.jpg");
+	background-size: cover;
+	opacity: 0.9;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	border-radius: var(--border-radius-value);
+}
+
+.controller::after {
+	content: "";
+	background-image: url("./gcc.png");
+	background-size: cover;
+	opacity: 0.9;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	border-radius: var(--border-radius-value);
+}
+
+.twitter::after {
+	content: "";
+	background-image: url("./twitter.jpg");
+	background-size: cover;
+	opacity: 0.8;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	border-radius: var(--border-radius-value);
+}
+
+.portfolio::after {
+	content: "";
+	background-image: url("./suppp.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--portfolio-project-bg);
+	opacity: 0.8;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	border-radius: var(--border-radius-value);
+}
+
 .outer-figure-title {
 	position: absolute;
 	top: 0;
