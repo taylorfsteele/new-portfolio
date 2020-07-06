@@ -6,9 +6,6 @@ Check .github/workflows for GitHub actions.
 
 ## To-Do
 
-- Finish Description
-- Upload updated Resume
-- Double check all links
 - Lazy loading on images
 - Dark Theme
 
