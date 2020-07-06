@@ -154,12 +154,12 @@ main {
 	border-radius: 50%;
 }
 
-.about-content img:first-of-type {
+/* .about-content img:first-of-type {
 	display: none;
 }
 .about-content img:last-of-type {
 	display: block;
-}
+} */
 
 .about-text-container {
 	padding: 1em;
@@ -259,12 +259,8 @@ ul.footer-links li a {
 		flex-direction: row;
 		justify-content: space-between;
 	}
-	.about-content img:first-of-type {
-		display: block;
+	.about-content img {
 		margin-left: 20%;
-	}
-	.about-content img:last-of-type {
-		display: none;
 	}
 }
 
