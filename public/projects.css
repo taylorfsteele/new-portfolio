@@ -160,6 +160,10 @@ figure {
 	padding-right: 1.5em;
 }
 
+.outer-figure .long {
+	display: none;
+}
+
 .inner-figure {
 	position: absolute;
 	top: 0;
@@ -182,9 +186,7 @@ figure {
 }
 
 .inner-figure img {
-	border-top-left-radius: calc(var(--border-radius-value) - 2px);
-	border-bottom-left-radius: calc(var(--border-radius-value) - 2px);
-	height: 100%;
+	display: none;
 }
 
 .inner-text {
@@ -479,7 +481,7 @@ figure {
 	width: 100%;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 950px) {
 	.col-1\@sm,
 	.col-2\@sm,
 	.col-3\@sm,
@@ -558,6 +560,14 @@ figure {
 	.inner-figure-small {
 		clip-path: circle(20% at 95% 92%);
 	}
+
+	.outer-figure .long {
+		display: block;
+	}
+
+	.outer-figure .short {
+		display: none;
+	}
 }
 @media screen and (min-width: 1024px) {
 	.col-1\@md,
@@ -621,5 +631,13 @@ figure {
 
 	.col-12\@md {
 		width: 100%;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.inner-figure img {
+		display: block;
+		border-top-left-radius: calc(var(--border-radius-value) - 2px);
+		border-bottom-left-radius: calc(var(--border-radius-value) - 2px);
+		height: 100%;
 	}
 }
