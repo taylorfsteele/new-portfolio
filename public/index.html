@@ -27,16 +27,16 @@
 		<header class="header">
 			<div class="header-text-container">
 				<h1>Taylor Steele</h1>
-				<h2>Software Engineer</h2>
+				<h2>Web & Mobile Developer</h2>
 				<a class="cta" href="#projects">See Projects</a>
 			</div>
-			<img src="pug.jpg" alt="pug" />
+			<img src="computer.svg" alt="pug" />
 		</header>
 		<main id="about">
 			<div class="about-container">
 				<p class="about-watermark">About</p>
 				<div class="about-content">
-					<img src="bowtie.jpg" alt="bowtie" />
+					<img src="portrait.jpg" alt="portrait" />
 					<div class="about-text-container">
 						<p>I'm a really cool guy turned software developer.</p>
 						<p>
@@ -44,7 +44,7 @@
 							MondoDB and Firebase
 						</p>
 					</div>
-					<img src="bowtie.jpg" alt="bowtie" />
+					<img src="portrait.jpg" alt="portrait" />
 				</div>
 			</div>
 		</main>
@@ -72,6 +72,7 @@
 								<button class="btn btn--primary" data-group="express">Express.js</button>
 								<button class="btn btn--primary" data-group="mongodb">MongoDB</button>
 								<button class="btn btn--primary" data-group="firebase">FireBase</button>
+								<button class="btn btn--primary" data-group="Webpack">Webpack</button>
 							</div>
 						</div>
 					</div>
@@ -82,72 +83,74 @@
 				<div id="grid" class="row shuffle-container">
 					<figure
 						class="col-6@xs col-8@sm col-6@md picture-item"
-						data-groups='["react-native", "react", "express", "mongodb", "node", "redux"]'
+						data-groups='["react-native", "react", "node", "redux", "express", "mongodb", "webpack"]'
 					>
-						<div class="outer-figure">
+						<div class="outer-figure walk">
 							<div class="outer-figure-title">
-								<h1>App Name</h1>
+								<h1>Walk Tracker</h1>
 							</div>
 							<div class="outer-figure-content">
-								<h4>Short app description, max 10 words</h4>
-								<p>React, Redux, Node.js<span>More</span></p>
+								<h4>Record, save, & see a map of your walks or hikes</h4>
+								<p>React Native, Node.js, Redux, Express.js, MongoDB, <span>More</span></p>
 							</div>
 							<div class="inner-figure">
-								<img src="suit.jpg" alt="" srcset="" />
+								<img src="WalkApp.png" alt="" srcset="" />
 								<div class="inner-text">
 									<h3>Description</h3>
-									<p>Here's some dumb stuff</p>
+									<p>
+										Record your walk or hike & see a live track of where you've been. Save your
+										route to your account to see all your previous routes.
+									</p>
 									<h3>Technology</h3>
-									<p>Here's some more dumb stuff</p>
-									<br />
+									<p>
+										React Native, Node.js, Redux, Express.js, MongoDB, REST-ful, Axios, Expo
+									</p>
 									<p>
 										<a
-											href="https://github.com/taylorfsteele/new-portfolio"
+											href="https://github.com/taylorfsteele/RN-Walk-Route-Tracking-App"
 											target="_blank"
 											rel="noopener noreferrer"
-											>GitHub</a
+											>Source Code</a
 										>
 										&nbsp;&nbsp;&nbsp;
 										<a
-											href="https://www.linkedin.com/in/taylorfsteele/"
+											href="https://expo.io/@taylorfsteele/tracker-demo-app"
 											target="_blank"
 											rel="noopener noreferrer"
-											>LinkedIn</a
+											>Live Demo</a
 										>
 									</p>
 								</div>
 							</div>
 						</div>
 					</figure>
-					<figure class="col-6@xs col-4@sm col-3@md picture-item" data-groups='["react", "node"]'>
-						<div class="outer-figure">
+					<figure
+						class="col-6@xs col-4@sm col-3@md picture-item"
+						data-groups='["react", "node", "express"]'
+					>
+						<div class="outer-figure job">
 							<div class="outer-figure-title">
-								<h1>App Name</h1>
+								<h1>Entry Job Board</h1>
 							</div>
 							<div class="outer-figure-content">
-								<h4>Don't exceed this line</h4>
-								<p>React, Redux, Node.js<span>More</span></p>
+								<h4>Automatically fetch entry jobs</h4>
+								<p>React, Node.js, Express.js<span>More</span></p>
 							</div>
 							<div class="inner-figure inner-figure-small">
 								<div class="inner-text">
 									<h3>Description</h3>
-									<p>Here's some dumb stuff</p>
+									<p>
+										Automatically fetches new entry-level jobs on a cron-job timer to display
+										onsite.
+									</p>
 									<h3>Technology</h3>
-									<p>Here's some more dumb stuff</p>
-									<br />
+									<p>React, Node.js, Express.js, Cron, Redis</p>
 									<p>
 										<a
-											href="https://github.com/taylorfsteele/new-portfolio"
+											href="https://github.com/taylorfsteele/Entry-Job-Board"
 											target="_blank"
 											rel="noopener noreferrer"
-											>GitHub</a
-										>
-										&nbsp;&nbsp;&nbsp;
-										<a
-											href="https://www.linkedin.com/in/taylorfsteele/"
-											target="_blank"
-											rel="noopener noreferrer"
-											>LinkedIn</a
+											>Source Code & Demo Instructions</a
 										>
 									</p>
 								</div>
@@ -158,7 +161,7 @@
 					<figure class="col-6@xs col-4@sm col-3@md picture-item" data-groups='["react"]'>
 						<div class="outer-figure">
 							<div class="outer-figure-title">
-								<h1>App Name</h1>
+								<h1>Walk Score</h1>
 							</div>
 							<div class="outer-figure-content">
 								<h4>Short app description</h4>
@@ -194,7 +197,7 @@
 					<figure class="col-6@xs col-4@sm col-3@md picture-item" data-groups='["typescript"]'>
 						<div class="outer-figure">
 							<div class="outer-figure-title">
-								<h1>App Name</h1>
+								<h1>Universal Controller</h1>
 							</div>
 							<div class="outer-figure-content">
 								<h4>Short app description</h4>
@@ -232,7 +235,7 @@
 					>
 						<div class="outer-figure">
 							<div class="outer-figure-title">
-								<h1>App Name</h1>
+								<h1>Shameless Twitter Clone</h1>
 							</div>
 							<div class="outer-figure-content">
 								<h4>Short app description, max 10 words</h4>
@@ -268,7 +271,7 @@
 					<figure class="col-6@xs col-4@sm col-3@md picture-item" data-groups='["firebase"]'>
 						<div class="outer-figure">
 							<div class="outer-figure-title">
-								<h1>App Name</h1>
+								<h1>CI/CD Portfolio</h1>
 							</div>
 							<div class="outer-figure-content">
 								<h4>Short app description</h4>

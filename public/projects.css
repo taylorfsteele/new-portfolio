@@ -40,16 +40,30 @@ figure {
 	border-radius: var(--border-radius-value);
 }
 
-.outer-figure::after {
+.walk::after {
 	content: "";
-	background-image: url("https://i.picsum.photos/id/287/4288/2848.jpg?hmac=f_-W7-bOKUxLoH9uOz4Hwk9D8zYTgzbHX7i_vY_ljug");
+	background-image: url("./walk.jpg");
 	background-size: cover;
-	opacity: 1;
+	opacity: 0.9;
+	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
+	z-index: -1;
+	border-radius: var(--border-radius-value);
+}
+
+.job::after {
+	content: "";
+	background-image: url("./jobBoard.jpg");
+	background-size: cover;
+	opacity: 0.9;
 	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 	z-index: -1;
 	border-radius: var(--border-radius-value);
 }
@@ -117,6 +131,11 @@ figure {
 
 .inner-text {
 	padding: 1em;
+	line-height: 0.8em;
+}
+
+.inner-text h3 {
+	text-decoration: underline;
 }
 
 .inner-text h3:first-of-type {
